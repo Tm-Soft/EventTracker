@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_all_init"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="전체 초기화"
+        android:layout_marginHorizontal="10dp"/>
+
+    <Button
+        android:id="@+id/btn_all_boot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="전체 부팅"
+        android:layout_marginHorizontal="10dp"/>
+
+    <Button
+        android:id="@+id/btn_all_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="전체 이벤트 전송"
+        android:layout_marginHorizontal="10dp"/>
+
+    <Button
+        android:id="@+id/btn_amplitude_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="앰플리튜드 이벤트 전송"
+        android:layout_marginHorizontal="10dp"/>
+
+    <Button
+        android:id="@+id/btn_firebase_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="파이어베이스 이벤트 전송"
+        android:layout_marginHorizontal="10dp"/>
+
+    <Button
+        android:id="@+id/btn_channelTalk_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="채널톡 이벤트 전송"
+        android:layout_marginHorizontal="10dp"/>
+
+    <Button
+        android:id="@+id/btn_appsflyer_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="앱스플라이어 이벤트 전송"
+        android:layout_marginHorizontal="10dp"/>
+
+</LinearLayout>
