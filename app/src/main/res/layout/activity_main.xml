@@ -57,4 +57,9 @@
         android:text="앱스플라이어 이벤트 전송"
         android:layout_marginHorizontal="10dp"/>
 
+    <EditText
+        android:id="@+id/et_edit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
 </LinearLayout>

@@ -1,10 +1,15 @@
 package com.kukwonho.myapplication
 
+import android.graphics.Rect
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
+import android.widget.Toast
 import com.example.newproject.util.tracker.NewTracker
 import com.example.newproject.util.tracker.TrackerType
+import com.kukwonho.myapplication.keyboard_observer.CrossKeyboardObserver
+import gun0912.tedkeyboardobserver.TedKeyboardObserver
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -12,6 +17,19 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         initListener()
+
+        CrossKeyboardObserver(
+            this,
+                Rect().apply { window.decorView.getWindowVisibleDisplayFrame(this) }.bottom
+            ).listen {
+            if (it) {
+                Toast.makeText(this, "키보드 ON", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "키보드 OFF", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        Log.d("whk__", "onCreate : ${Rect().apply { window.decorView.getWindowVisibleDisplayFrame(this) }.bottom}")
     }
 
     private fun initListener() {
